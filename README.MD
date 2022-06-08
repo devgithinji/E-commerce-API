@@ -1,6 +1,6 @@
-## Hosted Project
+# E-Commerce API
 
-[E-Commerce API Heroku URL](https://e-commerce-api-10.herokuapp.com/)
+##### Click [here](https://ecomerce-api-ke.herokuapp.com) to visit application
 
 #### Setup Basic Express Server
 
@@ -374,3 +374,5 @@
 - [] git remote -v
 - [] setup env vars in GUI
 - [] git push heroku master/main
+
+Dennis Githinji 🎉️

@@ -10,6 +10,13 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const fileUpload = require('express-fileupload')
 
+//security packages
+const rateLimiter = require('express-rate-limit');
+const helmet = require('helmet')
+const xss = require('xss-clean')
+const cors = require('cors')
+const mongoSanitise = require('express-mongo-sanitize')
+
 //database
 const connectDB = require('./db/connect')
 
@@ -23,6 +30,20 @@ const userRouter = require('./routes/userRoutes')
 const productRouter = require('./routes/productRoutes')
 const reviewsRouter = require('./routes/reviewRoutes')
 const orderRouter = require('./routes/orderRoutes')
+
+
+app.set('trust proxy', 1);
+app.use(
+    rateLimiter({
+        windowMs: 15 * 60 * 1000,
+        max: 60
+    })
+)
+
+app.use(helmet())
+app.use(cors())
+app.use(xss())
+app.use(mongoSanitise())
 
 //middlewares
 app.use(morgan('tiny'))

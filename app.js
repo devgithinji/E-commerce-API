@@ -7,7 +7,6 @@ const app = express();
 //other packages
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
-const cors = require('cors')
 const fileUpload = require('express-fileupload')
 
 //security packages

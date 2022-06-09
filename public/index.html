@@ -9,7 +9,7 @@
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*//*!normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css*/
 html {
     font-family: sans-serif;
-    -webkit-t ext-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%
 }
 
@@ -7318,6 +7318,9 @@ pre {
                         <ul>
                             <li><a class=endpoint_menu href=#jump-Auth-register>register</a>
                             <li><a class=endpoint_menu href=#jump-Auth-login>login</a>
+                            <li><a class=endpoint_menu href=#jump-Auth-verifyemail>verify-email</a>
+                            <li><a class=endpoint_menu href=#jump-Auth-forgotpassword>forgot-password</a>
+                            <li><a class=endpoint_menu href=#jump-Auth-resetpassword>reset-password</a>
                             <li><a class=endpoint_menu href=#jump-Auth-logout>logout</a>
                         </ul>
                     <li><strong><a href=#user>user</a></strong>
@@ -7360,7 +7363,7 @@ pre {
             <div class=col-md-9>
                 <div class="panel panel-default">
                     <div class=panel-heading><h3 class=panel-title id=Auth>Auth
-                        <span class=badge>3</span></h3></div>
+                        <span class=badge>6</span></h3></div>
                     <div class=panel-body><p>
                         <div class=request-item>
                             <div class=panel-group id=accordion-Auth>
@@ -7394,8 +7397,65 @@ pre {
                                     <div id=collapse-Auth-login class="panel-collapse collapse">
                                         <div class=panel-body><h5 class="label label-primary">Body</h5><span
                                                 class=resp-prettyprint>{
-&#34;email&#34;:&#34;annie@gmail.com&#34;,
+&#34;email&#34;:&#34;wakahiad@gmail.com&#34;,
 &#34;password&#34;: &#34;newsecret&#34;
+}</span>
+                                            <div class=clearfix></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success" id=jump-Auth-verifyemail>
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                           href=#collapse-Auth-verifyemail><h4 class=panel-title><span
+                                                class="glyphicon glyphicon-plus"></span><strong>verify-email</strong>
+                                            &nbsp;|&nbsp;
+                                            <strong class="request-method border-success">POST</strong>
+                                            &nbsp;
+                                            https://ecomerce-api-ke.herokuapp.com/auth/verify-email</h4></a></div>
+                                    <div id=collapse-Auth-verifyemail class="panel-collapse collapse">
+                                        <div class=panel-body><h5 class="label label-primary">Body</h5><span
+                                                class=resp-prettyprint>{
+&#34;email&#34;:&#34;wakahiad@gmail.com&#34;,
+&#34;verificationToken&#34;: &#34;0b413f25e2324e85533ccd9badbd5dc12ffd07a068c83c1edf0e9f423aa7fd8ec607263142517dbd&#34;
+}</span>
+                                            <div class=clearfix></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success" id=jump-Auth-forgotpassword>
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                           href=#collapse-Auth-forgotpassword><h4 class=panel-title><span
+                                                class="glyphicon glyphicon-plus"></span><strong>forgot-password</strong>
+                                            &nbsp;|&nbsp;
+                                            <strong class="request-method border-success">POST</strong>
+                                            &nbsp;
+                                            https://ecomerce-api-ke.herokuapp.com/auth/forgot-password</h4></a></div>
+                                    <div id=collapse-Auth-forgotpassword class="panel-collapse collapse">
+                                        <div class=panel-body><h5 class="label label-primary">Body</h5><span
+                                                class=resp-prettyprint>{
+&#34;email&#34;:&#34;wakahiad@gmail.com&#34;
+}</span>
+                                            <div class=clearfix></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-success" id=jump-Auth-resetpassword>
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                           href=#collapse-Auth-resetpassword><h4 class=panel-title><span
+                                                class="glyphicon glyphicon-plus"></span><strong>reset-password</strong>
+                                            &nbsp;|&nbsp;
+                                            <strong class="request-method border-success">POST</strong>
+                                            &nbsp;
+                                            https://ecomerce-api-ke.herokuapp.com/auth/reset-password</h4></a></div>
+                                    <div id=collapse-Auth-resetpassword class="panel-collapse collapse">
+                                        <div class=panel-body><h5 class="label label-primary">Body</h5><span
+                                                class=resp-prettyprint>{
+&#34;email&#34;:&#34;wakahiad@gmail.com&#34;,
+&#34;token&#34;: &#34;6cab58c70897924b34c0d6db5a4b9eafd70b60f45c2554581dbbab6f471e86059876dd2bff2cf0ff38b714be69c8a3f9a8c8b2e5f7cd31117b49a5ffa5225223864bc07d0832&#34;,
+&#34;password&#34;:&#34;newsecret&#34;
 }</span>
                                             <div class=clearfix></div>
                                         </div>
@@ -7839,7 +7899,7 @@ pre {
     <footer class="navbar-default navbar-fixed-bottom">
         <div class=container-fluid>
             <div class="span12 text-center"><span data-toggle=tooltip
-                                                  title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated at 2022-06-08 22:13:22 by <a
+                                                  title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated at 2022-06-09 17:19:46 by <a
                     href=https://github.com/thedevsaddam/docgen target=_blank class=text-muted>docgen</a></span></div>
         </div>
     </footer>
